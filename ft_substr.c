@@ -6,7 +6,7 @@
 /*   By: mickert <mickert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 16:56:50 by mickert           #+#    #+#             */
-/*   Updated: 2023/10/14 12:26:46 by mickert          ###   ########.fr       */
+/*   Updated: 2023/11/08 15:15:32 by mickert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup("\0"));
 	if (strlen - start < len)
 		len = strlen - start;
-	star = (char *)malloc(len + 1);
+	star = (char *)ft_calloc((len + 1), sizeof(char));
 	if (star == NULL)
 		return (NULL);
 	i = 0;
@@ -35,6 +35,30 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	star[i] = '\0';
 	return (star);
 }
+
+// char	*ft_substr(char const *s, unsigned int start, size_t len)
+// {
+// 	unsigned int	strlen;
+// 	char			*star;
+// 	size_t			i;
+
+// 	strlen = ft_strlen(s);
+// 	if (start >= strlen)
+// 		return (ft_strdup("\0"));
+// 	if (strlen - start < len)
+// 		len = strlen - start;
+// 	star = (char *)malloc(len + 1);
+// 	if (star == NULL)
+// 		return (NULL);
+// 	i = 0;
+// 	while (s[i] && i < len)
+// 	{
+// 		star[i] = s[start + i];
+// 		i++;
+// 	}
+// 	star[i] = '\0';
+// 	return (star);
+// }
 
 // #include <string.h>
 // #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: mickert <mickert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 16:43:26 by mickert           #+#    #+#             */
-/*   Updated: 2023/10/14 11:21:48 by mickert          ###   ########.fr       */
+/*   Updated: 2023/11/08 15:17:45 by mickert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,12 @@ char	*ft_strdup(const char *src)
 	i = 0;
 	while (src[i])
 		i++;
-	dest = (char *)malloc(i + 1);
+	dest = (char *)ft_calloc((i + 1), sizeof(char));
 	if (dest == NULL)
+	{
+		free(dest);
 		return (NULL);
+	}
 	i = 0;
 	while (src[i])
 	{
@@ -32,6 +35,7 @@ char	*ft_strdup(const char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+
 // #include <stdio.h>
 // #include <string.h>
 
@@ -48,4 +52,25 @@ char	*ft_strdup(const char *src)
 // 	free(dest);
 //  free(dest2);
 // 	return (0);
+// }
+
+// char	*ft_strdup(const char *src)
+// {
+// 	char	*dest;
+// 	int		i;
+
+// 	i = 0;
+// 	while (src[i])
+// 		i++;
+// 	dest = (char *)malloc(i + 1);
+// 	if (dest == NULL)
+// 		return (NULL);
+// 	i = 0;
+// 	while (src[i])
+// 	{
+// 		dest[i] = src[i];
+// 		i++;
+// 	}
+// 	dest[i] = '\0';
+// 	return (dest);
 // }

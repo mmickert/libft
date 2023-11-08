@@ -6,13 +6,13 @@
 /*   By: mickert <mickert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 11:01:51 by mickert           #+#    #+#             */
-/*   Updated: 2023/10/14 11:24:41 by mickert          ###   ########.fr       */
+/*   Updated: 2023/11/08 15:15:01 by mickert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	size_t	s1len;
 	size_t	s2len;
@@ -22,9 +22,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
-	joinedstr = (char *)malloc(s1len + s2len + 1);
+	// if (!s1 || !s2)
+	// 	return (s2);
+	joinedstr = (char *)ft_calloc((s1len + s2len + 1), sizeof(char));
 	if (joinedstr == NULL)
-		return (NULL);
+		return (free(joinedstr), NULL);
 	i = 0;
 	j = 0;
 	while (s1[i])
@@ -33,13 +35,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	while (s2[j])
-	{
-		joinedstr[i] = s2[j];
-		i++;
-		j++;
-	}
+		joinedstr[i++] = s2[j++];
 	return (joinedstr[i] = 0, joinedstr);
 }
+
 // #include <stdio.h>
 
 // int	main(void)
@@ -50,4 +49,33 @@ char	*ft_strjoin(char const *s1, char const *s2)
 //	printf("%s", ptr);
 //	free(ptr);
 // 	return 0;
+// }
+
+// char	*ft_strjoin(char const *s1, char const *s2)
+// {
+// 	size_t	s1len;
+// 	size_t	s2len;
+// 	char	*joinedstr;
+// 	int		i;
+// 	int		j;
+
+// 	s1len = ft_strlen(s1);
+// 	s2len = ft_strlen(s2);
+// 	joinedstr = (char *)malloc(s1len + s2len + 1);
+// 	if (joinedstr == NULL)
+// 		return (NULL);
+// 	i = 0;
+// 	j = 0;
+// 	while (s1[i])
+// 	{
+// 		joinedstr[i] = s1[i];
+// 		i++;
+// 	}
+// 	while (s2[j])
+// 	{
+// 		joinedstr[i] = s2[j];
+// 		i++;
+// 		j++;
+// 	}
+// 	return (joinedstr[i] = 0, joinedstr);
 // }
