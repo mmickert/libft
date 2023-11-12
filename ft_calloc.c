@@ -6,7 +6,7 @@
 /*   By: mickert <mickert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:59:46 by mickert           #+#    #+#             */
-/*   Updated: 2023/11/08 15:15:45 by mickert          ###   ########.fr       */
+/*   Updated: 2023/11/12 11:31:00 by mickert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,17 @@ void	*ft_calloc(size_t count, size_t size)
 	return (ptr);
 }
 
-void	*ft_calloc(size_t count, size_t size)
-{
-	size_t	totallen;
-	void	*ptr;
+// void	*ft_calloc(size_t count, size_t size)
+// {
+// 	size_t	totallen;
+// 	void	*ptr;
 
-	totallen = count * size;
-	ptr = malloc(totallen);
-	if (ptr)
-		ft_memset(ptr, 0, totallen);
-	return (ptr);
-}
+// 	totallen = count * size;
+// 	ptr = malloc(totallen);
+// 	if (ptr)
+// 		ft_memset(ptr, 0, totallen);
+// 	return (ptr);
+// }
 // #include <stdio.h>
 
 // int	main(void)

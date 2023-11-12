@@ -6,7 +6,7 @@
 /*   By: mickert <mickert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 12:30:49 by mickert           #+#    #+#             */
-/*   Updated: 2023/10/22 11:08:57 by mickert          ###   ########.fr       */
+/*   Updated: 2023/11/12 11:40:18 by mickert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,13 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+int		ft_printf(const char *format, ...);
+int		ft_putunsignednbr_fd(unsigned int n, int fd, size_t count);
+int		ft_puthexlow_fd(unsigned long long n, int fd, size_t count);
+int		ft_puthexup_fd(unsigned long long n, int fd, size_t count);
+int		ft_putpointer_fd(size_t ptr, int fd, size_t count);
+int		ft_puthexptr_fd(unsigned long long n, int fd, size_t count);
+int		ft_puthex_fd(int fd, size_t count, int index, char *buffer);
+
 
 #endif

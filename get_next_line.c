@@ -6,7 +6,7 @@
 /*   By: mickert <mickert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:53:06 by mickert           #+#    #+#             */
-/*   Updated: 2023/11/05 15:04:24 by mickert          ###   ########.fr       */
+/*   Updated: 2023/11/12 12:20:59 by mickert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,17 +104,17 @@ int	find_n(char *new_buffer)
 	return (0);
 }
 
-void	ft_bzero(void *str, size_t n)
-{
-	size_t	i;
+// void	ft_bzero(void *str, size_t n)
+// {
+// 	size_t	i;
 
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)str)[i] = 0x00;
-		i++;
-	}
-}
+// 	i = 0;
+// 	while (i < n)
+// 	{
+// 		((unsigned char *)str)[i] = 0x00;
+// 		i++;
+// 	}
+// }
 
 // #include <fcntl.h>
 // #include <stdio.h>
