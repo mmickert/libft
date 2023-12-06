@@ -6,7 +6,7 @@
 /*   By: mickert <mickert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 11:01:51 by mickert           #+#    #+#             */
-/*   Updated: 2023/11/12 11:41:28 by mickert          ###   ########.fr       */
+/*   Updated: 2023/12/02 14:45:24 by mickert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
-	// if (!s1 || !s2)
-	// 	return (s2);
 	joinedstr = (char *)ft_calloc((s1len + s2len + 1), sizeof(char));
 	if (joinedstr == NULL)
 		return (free(joinedstr), NULL);

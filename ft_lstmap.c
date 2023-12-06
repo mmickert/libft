@@ -6,7 +6,7 @@
 /*   By: mickert <mickert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 17:38:40 by mickert           #+#    #+#             */
-/*   Updated: 2023/10/30 12:24:59 by mickert          ###   ########.fr       */
+/*   Updated: 2023/12/02 14:45:31 by mickert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*transformed_nod;
 	void	*transformed_content;
 
-	// transformed_lst = NULL;
-	// transformed_nod = NULL;
 	while (lst)
 	{
 		transformed_content = f(lst->content);

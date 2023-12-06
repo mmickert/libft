@@ -6,7 +6,7 @@
 /*   By: mickert <mickert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:14:33 by mickert           #+#    #+#             */
-/*   Updated: 2023/10/12 16:52:37 by mickert          ###   ########.fr       */
+/*   Updated: 2023/12/03 18:20:47 by mickert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	char	*temp;
 	size_t	copied;
 
-	temp = dst;
 	copied = 0;
 	if (dstsize > 0)
 	{
