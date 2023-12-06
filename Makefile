@@ -6,7 +6,7 @@
 #    By: mickert <mickert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/04 17:45:12 by mickert           #+#    #+#              #
-#    Updated: 2023/10/23 18:48:24 by mickert          ###   ########.fr        #
+#    Updated: 2023/11/13 13:24:50 by mickert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_strdup.c ft_substr.c ft_strjoi
 ft_calloc.c ft_putchar_fd.c ft_striteri.c ft_strmapi.c ft_putstr_fd.c ft_putendl_fd.c \
 ft_putnbr_fd.c ft_strtrim.c ft_itoa.c ft_split.c ft_lstadd_front.c \
 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-ft_lstclear.c ft_lstiter.c ft_lstmap.c 
+ft_lstclear.c ft_lstiter.c ft_lstmap.c get_next_line.c ft_printf.c ft_put.c ft_puthex_fd.c 
 
 OBJ = $(SRC:.c=.o)
 NAME = libft.a

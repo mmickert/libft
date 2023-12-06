@@ -6,7 +6,7 @@
 /*   By: mickert <mickert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 12:07:03 by mickert           #+#    #+#             */
-/*   Updated: 2023/11/12 12:18:56 by mickert          ###   ########.fr       */
+/*   Updated: 2023/11/13 13:05:44 by mickert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
-// # include "libft/libft.h"
+# include "libft.h"
 
 # define TRUE 1
 # define FALSE 0
